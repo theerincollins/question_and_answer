@@ -1,0 +1,1 @@
+qAndA = Ember.Application.create();
