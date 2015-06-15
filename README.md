@@ -1,4 +1,4 @@
-Blogger
+Question and Answer App
 =======
 
 A simple example app built with Ember.js. All dependencies are included.

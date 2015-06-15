@@ -1,17 +1,18 @@
-<nav class='navbar navbar-default' role='navigation'>
-  <ul class='nav navbar-nav'>
-    <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
-  </ul>
-</nav>
-
-<ul>
-  {{#each}}
-    <li>{{#link-to 'question' this.id}}{{body}}{{/link-to}}</li>
-  {{/each}}
-</ul>
+<div class="container-fluid">
+  <nav class='navbar navbar-default' role='navigation'>
+    <ul class='nav navbar-nav'>
+      <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
+    </ul>
+  </nav>
+</div>
 
 <div class="container">
-  <h1>{{#link-to 'answers'}}These are questions{{/link-to}}</h1>
+<ul>
+  {{#each}}
+    <li>{{#link-to 'question' this.id}}{{body}} <br> Posted By: {{author}}{{/link-to}}</li>
+{{/each}}
+</ul>
 
-  {{outlet}}
+{{#link-to 'new-question' classNames="btn btn-primary"}}Add a Question{{/link-to}}
+
 </div>

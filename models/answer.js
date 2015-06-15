@@ -1,3 +1,4 @@
 qAndA.Answer = DS.Model.extend({
-  text: DS.attr()
-})
+  text: DS.attr(),
+  question: DS.belongsTo('question', {async:true})
+});

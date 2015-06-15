@@ -1,0 +1,8 @@
+<h2>Answers</h2>
+{{#each answer in answers itemController="answer"}}
+<li>{{#link-to 'answer' answer}}{{answer.text}}{{/link-to}}</li>
+
+  <button class="btn btn-primary" {{action 'editAnswer'}}>Edit Answer</button>
+  <button class="btn btn-danger" {{action 'deleteAnswer'}}>Delete Answer</button>
+
+{{/each}}
